@@ -17,11 +17,7 @@ class MyClient(discord.Client):
         # Prevent replying to itself
         if message.author == self.user:
             return
-
-        # Check for $hello command
-        if message.content.startswith('$hello'):
-            await message.channel.send('Hello World!')
-
+        
         if message.content.startswith('$meme'):
             await message.channel.send(get_meme())
 
